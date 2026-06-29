@@ -1,1262 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Job Answered — The Answering Service That Books The Job</title>
-<meta name="description" content="Job Answered is a done-for-you answering service that picks up every call 24/7 and books jobs straight to your calendar. Built for Williamson County local service business. Live in 7 days. $497/mo. Cancel anytime." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --ink: #0A0A0A;
-    --paper: #F4EEE0;
-    --hi-vis: #FF5C1C;
-    --hi-vis-deep: #D14600;
-    --steel: #1F1F1F;
-    --rust: #8B2D00;
-    --line: rgba(244, 238, 224, 0.12);
-    --line-dark: rgba(10, 10, 10, 0.14);
-  }
+74% of service business calls go unanswered
+86% of callers won't leave a voicemail
+Live in 7 days
+$497 / month flat — cancel anytime
+Built for local service businesses in Williamson County, TX
+Georgetown · Round Rock · Cedar Park · Leander · Hutto
+74% of service business calls go unanswered
+86% of callers won't leave a voicemail
+Live in 7 days
+$497 / month flat — cancel anytime
+Built for local service businesses in Williamson County, TX
+Georgetown · Round Rock · Cedar Park · Leander · Hutto
+Job
+Answered
+How it works
+What it does
+Pricing
+FAQ
+Book a call →
+AI Receptionist for Williamson County local service businesses
+Every call
+answered.
+Period.
+Job Answered is a done-for-you answering service that picks up every call 24/7, qualifies the lead, and books the job straight to your calendar. Built for local service businesses in Georgetown, Round Rock, Cedar Park, Leander, and Hutto. Live in 7 days. $497/month flat. No contracts.
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--ink);
-    color: var(--paper);
-    font-family: 'Manrope', system-ui, sans-serif;
-    font-weight: 500;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
+Book a 10-min call
+→
+See how it works
+→ Live call · 9:47 PM Tuesday
+Recording
+— Caller (9:47 PM)
+Hi, I have a situation at my business and need someone out tonight. Can you help?
+— Job Answered
+Absolutely — let's get someone out to you. Can you tell me a little more about what's going on?
+— Caller
+Our system went down and we've got customers coming in tomorrow morning.
+— Job Answered
+Got it. We have someone available tonight at 10 PM or tomorrow at 7 AM before your customers arrive. Which works better?
+— Caller
+Tonight at 10. Address is 4827 Sun City Boulevard, Georgetown.
+— Job Answered
+Booked. You'll get a confirmation text in about 30 seconds. Is there anything else I can help with tonight?
+✓ Job booked
+$680 · Service call · Tomorrow 9 AM
+Customer texted confirmation. Owner notified.
+↻ Replay demo call
+◉
+Williamson County, TX
+·
+Georgetown · Round Rock · Cedar Park · Leander · Hutto · Taylor · Liberty Hill
+·
+Built locally · Run locally · Owner answers the phone
+The Math
+Every missed call is a job your competitor books.
+You're on a job, in a meeting, or off the clock. Phone rings. Goes to voicemail. The customer is already calling the next number on Google.
 
-  ::selection { background: var(--hi-vis); color: var(--ink); }
+74%
+of local service calls go unanswered
+NextPhone, 130k call analysis
+86%
+of callers won't leave a voicemail
+Industry research, 2026
+$680
+average local service ticket
+ServiceTitan benchmark
+< 60s
+how long callers wait before moving on
+Invoca
+// Your missed-revenue calculator
+Missed calls per week
+8
 
-  .display { font-family: 'Anton', 'Arial Black', sans-serif; font-weight: 400; letter-spacing: -0.01em; line-height: 0.92; text-transform: uppercase; }
-  .mono { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+Average ticket
+$700
 
-  /* ----- TICKER BAR ----- */
-  .ticker {
-    background: var(--hi-vis);
-    color: var(--ink);
-    padding: 10px 0;
-    overflow: hidden;
-    border-bottom: 2px solid var(--ink);
-    position: relative;
-  }
-  .ticker-track {
-    display: flex;
-    gap: 60px;
-    white-space: nowrap;
-    animation: ticker 38s linear infinite;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-  }
-  .ticker-track span { display: inline-flex; align-items: center; gap: 12px; }
-  .ticker-track span::before { content: "▸"; color: var(--ink); }
-  @keyframes ticker {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
+Close rate when answered
+35%
 
-  /* ----- NAV ----- */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--ink);
-    border-bottom: 1px solid var(--line);
-    backdrop-filter: blur(8px);
-    background: rgba(10,10,10,0.92);
-  }
-  .nav-inner {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 18px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Anton', sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    line-height: 1;
-  }
-  .logo-mark {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: var(--hi-vis);
-  }
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 0.95;
-  }
-  .logo-text .l1 { color: var(--paper); }
-  .logo-text .l2 { color: var(--hi-vis); }
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    align-items: center;
-  }
-  .nav-links a {
-    color: var(--paper);
-    text-decoration: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    opacity: 0.75;
-    transition: opacity 0.2s, color 0.2s;
-  }
-  .nav-links a:hover { opacity: 1; color: var(--hi-vis); }
-  .nav-cta {
-    background: var(--hi-vis);
-    color: var(--ink) !important;
-    padding: 10px 20px;
-    opacity: 1 !important;
-    font-weight: 700;
-    border: 2px solid var(--hi-vis);
-    transition: all 0.15s;
-  }
-  .nav-cta:hover {
-    background: var(--paper);
-    border-color: var(--paper);
-    color: var(--ink) !important;
-  }
-  @media (max-width: 768px) {
-    .nav-links a:not(.nav-cta) { display: none; }
-  }
+Revenue you're losing per year
+$101,920
+Job Answered costs $5,964/yr. ROI: 17.1×
+7 Days From Hello To Live
+Simple on purpose.
+No 90-day rollouts. No "transformation roadmap." We have one playbook and we run it the same way every time.
 
-  /* ----- HERO ----- */
-  .hero {
-    position: relative;
-    padding: 80px 32px 100px;
-    max-width: 1320px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 60px;
-    align-items: end;
-  }
-  @media (max-width: 1024px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-  }
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--hi-vis);
-    margin-bottom: 32px;
-  }
-  .eyebrow::before {
-    content: "";
-    display: block;
-    width: 32px;
-    height: 2px;
-    background: var(--hi-vis);
-  }
-  h1.hero-headline {
-    font-size: clamp(56px, 9vw, 144px);
-    margin-bottom: 32px;
-  }
-  h1.hero-headline .stroke {
-    -webkit-text-stroke: 2px var(--paper);
-    color: transparent;
-    display: inline;
-  }
-  h1.hero-headline .hi {
-    color: var(--hi-vis);
-    display: inline-block;
-    position: relative;
-  }
-  h1.hero-headline .hi::after {
-    content: "";
-    position: absolute;
-    bottom: 8%;
-    left: 0;
-    right: 0;
-    height: 14px;
-    background: var(--ink);
-    z-index: -1;
-  }
-  .hero-sub {
-    font-size: clamp(18px, 1.5vw, 22px);
-    max-width: 560px;
-    line-height: 1.45;
-    color: rgba(244, 238, 224, 0.78);
-    margin-bottom: 40px;
-  }
-  .hero-cta {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .btn-primary, .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 18px 28px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    cursor: pointer;
-    border: 2px solid var(--hi-vis);
-    transition: all 0.15s ease;
-  }
-  .btn-primary {
-    background: var(--hi-vis);
-    color: var(--ink);
-  }
-  .btn-primary:hover {
-    background: var(--paper);
-    border-color: var(--paper);
-    transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0 var(--hi-vis);
-  }
-  .btn-secondary {
-    background: transparent;
-    color: var(--paper);
-    border-color: var(--paper);
-  }
-  .btn-secondary:hover {
-    background: var(--paper);
-    color: var(--ink);
-  }
-  .arrow { display: inline-block; transition: transform 0.2s; }
-  .btn-primary:hover .arrow, .btn-secondary:hover .arrow { transform: translateX(4px); }
+Day 1
+01
+Onboarding call
+30 minutes. We capture how you talk to customers, your pricing, your service area, your hours, and your calendar.
+Day 2–4
+02
+We build your AI
+Trained on your voice, your services, your pricing. Connected to your calendar or scheduling software.
+Day 5–6
+03
+You stress-test it
+We run 15 real-world scenarios with you on the line. Tune until you sign off.
+Day 7
+04
+Go live
+Forward your line. Calls start booking jobs. We monitor every call for the first 30 days and tune weekly. You watch the calendar fill.
+What Job Answered Actually Does
+One job. Done right.
+No 14-feature SaaS to learn. Job Answered does one thing — answer the phone and book the job — and does it better than the receptionist you can't afford.
 
-  /* ----- HERO PHONE WIDGET ----- */
-  .phone-card {
-    background: var(--steel);
-    border: 1px solid var(--line);
-    padding: 32px;
-    position: relative;
-  }
-  .phone-card::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    height: 4px;
-    background: var(--hi-vis);
-  }
-  .phone-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--line);
-  }
-  .phone-card-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: rgba(244, 238, 224, 0.6);
-  }
-  .live-dot {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    color: var(--hi-vis);
-  }
-  .live-dot::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: var(--hi-vis);
-    border-radius: 50%;
-    animation: pulse 1.4s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-  .transcript {
-    min-height: 320px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13.5px;
-    line-height: 1.6;
-  }
-  .msg {
-    margin-bottom: 14px;
-    opacity: 0;
-    animation: msgIn 0.5s forwards;
-  }
-  @keyframes msgIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .msg-label {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 4px;
-  }
-  .msg-customer .msg-label { color: rgba(244, 238, 224, 0.5); }
-  .msg-ai .msg-label { color: var(--hi-vis); }
-  .msg-customer .msg-text { color: rgba(244, 238, 224, 0.85); }
-  .msg-ai .msg-text { color: var(--paper); border-left: 2px solid var(--hi-vis); padding-left: 12px; }
-  .booking-confirm {
-    background: var(--hi-vis);
-    color: var(--ink);
-    padding: 14px 16px;
-    margin-top: 16px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-    opacity: 0;
-    animation: msgIn 0.5s forwards 5s;
-  }
-  .booking-confirm strong { display: block; font-size: 16px; margin-bottom: 4px; }
-  .replay-btn {
-    margin-top: 16px;
-    background: transparent;
-    color: var(--paper);
-    border: 1px solid var(--line);
-    padding: 8px 14px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.15s;
-  }
-  .replay-btn:hover {
-    border-color: var(--hi-vis);
-    color: var(--hi-vis);
-  }
+24
+Picks up 24/7
+Every call. First ring. 2 AM, Sunday morning, holidays. Handles unlimited simultaneous calls so you never get a busy signal.
+→
+Books the job live
+Reads your real calendar, offers real time slots, books straight in. Customer gets a confirmation text before they hang up.
+!
+Triages urgent calls
+Emergency keywords trigger an instant warm transfer to you or your on-call staff. No customer waits.
+$
+Trained on your pricing
+Knows your rates, your service call fee, and your policies. Quotes accurately — not guesses.
+ES
+Bilingual EN / ES
+Williamson County reality: a meaningful share of your callers prefer Spanish. Job Answered handles both natively.
+↻
+Spam filter
+Robocalls and telemarketers filtered before your phone rings. Real callers only get through.
+One Plan. One Price. No Tiers.
+$497 a month.
+That's the whole price list.
+$
+497
+/ mo
+No setup fee · No contracts · Cancel anytime
+Custom AI receptionist
+— built and tuned to your business in 7 days
+Unlimited calls
+— no per-minute, per-call, or overage charges
+24/7 booking
+— direct into your calendar or scheduling software
+Bilingual English / Spanish
+— included, not an upsell
+Live urgent call transfer
+to you or your on-call staff
+Monthly performance report
+— calls answered, jobs booked, revenue captured
+Weekly tuning
+for the first 90 days. Monthly after that.
+30-day money back.
+Cancel anytime. No contracts. Ever.
+★ Booked-Job Guarantee ★
+If Job Answered doesn't book you at least
+$2,000 in jobs in your first 30 days,
+you get every dollar back.
+No fine print, no escape clauses. If the math doesn't work, you don't pay. We can offer this because it always works — but if you're the exception, we'll write the check.
 
-  /* ----- SECTIONS ----- */
-  section {
-    padding: 100px 32px;
-    position: relative;
-  }
-  .section-inner {
-    max-width: 1320px;
-    margin: 0 auto;
-  }
-  .section-light {
-    background: var(--paper);
-    color: var(--ink);
-  }
-  .section-light .eyebrow { color: var(--hi-vis-deep); }
-  .section-light .eyebrow::before { background: var(--hi-vis-deep); }
-  .section-header {
-    margin-bottom: 64px;
-    max-width: 900px;
-  }
-  h2 {
-    font-size: clamp(40px, 6vw, 84px);
-    margin-bottom: 24px;
-  }
-  h2 .accent { color: var(--hi-vis); }
-  .section-light h2 .accent { color: var(--hi-vis-deep); }
-  .section-sub {
-    font-size: clamp(17px, 1.3vw, 20px);
-    line-height: 1.5;
-    color: rgba(244, 238, 224, 0.7);
-    max-width: 640px;
-  }
-  .section-light .section-sub { color: rgba(10, 10, 10, 0.7); }
+Real Questions
+The stuff owners actually ask.
+If your question isn't here, text us. We answer.
 
-  /* ----- LOCAL BAR ----- */
-  .local-bar {
-    background: var(--steel);
-    padding: 20px 32px;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-  .local-bar-inner {
-    max-width: 1320px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 36px;
-    flex-wrap: wrap;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(244,238,224,0.6);
-  }
-  .local-bar-inner .pin { color: var(--hi-vis); }
-  .local-bar-inner span { display: inline-flex; align-items: center; gap: 8px; }
+Will my customers know it's AI?
+What kind of businesses does this work for?
+Can it work with my scheduling software?
+Why $497 when other AI tools are $99?
+What if I want to cancel?
+Are you actually local?
+Stop missing
+the money.
+10-minute call. We'll show you exactly what Job Answered would have done with last week's missed calls.
 
-  /* ----- THE PROBLEM (calculator) ----- */
-  .calc-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-  @media (max-width: 1024px) {
-    .calc-grid { grid-template-columns: 1fr; gap: 32px; }
-  }
-  .calc-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background: rgba(10,10,10,0.18);
-    border: 1px solid rgba(10,10,10,0.18);
-  }
-  .stat {
-    background: var(--paper);
-    padding: 32px;
-  }
-  .stat-num {
-    font-family: 'Anton', sans-serif;
-    font-size: clamp(48px, 5vw, 72px);
-    line-height: 1;
-    color: var(--hi-vis-deep);
-    margin-bottom: 8px;
-  }
-  .stat-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(10,10,10,0.7);
-  }
-  .stat-source {
-    display: block;
-    margin-top: 6px;
-    opacity: 0.5;
-    font-size: 10px;
-  }
-
-  .calculator {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 40px;
-    border: 2px solid var(--ink);
-  }
-  .calc-title {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--hi-vis);
-    margin-bottom: 24px;
-  }
-  .calc-row {
-    margin-bottom: 24px;
-  }
-  .calc-row label {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: rgba(244,238,224,0.7);
-  }
-  .calc-row .calc-value {
-    color: var(--paper);
-    font-weight: 700;
-    font-size: 14px;
-  }
-  .calc-row input[type="range"] {
-    width: 100%;
-    -webkit-appearance: none;
-    appearance: none;
-    height: 4px;
-    background: rgba(244,238,224,0.18);
-    outline: none;
-  }
-  .calc-row input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 22px;
-    height: 22px;
-    background: var(--hi-vis);
-    border: 2px solid var(--paper);
-    cursor: pointer;
-    border-radius: 0;
-  }
-  .calc-row input[type="range"]::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
-    background: var(--hi-vis);
-    border: 2px solid var(--paper);
-    cursor: pointer;
-    border-radius: 0;
-  }
-  .calc-result {
-    margin-top: 32px;
-    padding-top: 32px;
-    border-top: 1px solid var(--line);
-  }
-  .calc-result-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(244,238,224,0.6);
-    margin-bottom: 6px;
-  }
-  .calc-result-num {
-    font-family: 'Anton', sans-serif;
-    font-size: clamp(56px, 7vw, 96px);
-    line-height: 1;
-    color: var(--hi-vis);
-  }
-  .calc-result-sub {
-    margin-top: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: rgba(244,238,224,0.6);
-  }
-
-  /* ----- HOW IT WORKS ----- */
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--line);
-  }
-  @media (max-width: 1024px) { .steps { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
-  .step {
-    padding: 40px 28px;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    position: relative;
-    transition: background 0.2s;
-  }
-  .step:hover { background: rgba(255,92,28,0.06); }
-  .step:last-child { border-right: none; }
-  .step-num {
-    font-family: 'Anton', sans-serif;
-    font-size: 64px;
-    color: var(--hi-vis);
-    line-height: 1;
-    margin-bottom: 24px;
-  }
-  .step-title {
-    font-family: 'Anton', sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
-    margin-bottom: 12px;
-  }
-  .step-desc {
-    color: rgba(244,238,224,0.7);
-    font-size: 15px;
-    line-height: 1.55;
-  }
-  .step-day {
-    position: absolute;
-    top: 32px;
-    right: 28px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: rgba(244,238,224,0.5);
-    text-transform: uppercase;
-  }
-
-  /* ----- WHAT IT DOES ----- */
-  .features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: rgba(10,10,10,0.14);
-    border: 1px solid rgba(10,10,10,0.14);
-  }
-  @media (max-width: 1024px) { .features { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { .features { grid-template-columns: 1fr; } }
-  .feature {
-    background: var(--paper);
-    padding: 36px 28px;
-    transition: background 0.2s;
-  }
-  .feature:hover { background: #ECE3CF; }
-  .feature-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--ink);
-    color: var(--hi-vis);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  .feature-title {
-    font-family: 'Anton', sans-serif;
-    font-size: 22px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: var(--ink);
-  }
-  .feature-desc {
-    font-size: 14.5px;
-    line-height: 1.55;
-    color: rgba(10,10,10,0.7);
-  }
-
-  /* ----- PRICING ----- */
-  .pricing-block {
-    background: var(--steel);
-    border: 1px solid var(--line);
-    padding: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    position: relative;
-  }
-  .pricing-block::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 6px;
-    background: repeating-linear-gradient(90deg, var(--hi-vis) 0 28px, var(--ink) 28px 36px);
-  }
-  @media (max-width: 1024px) {
-    .pricing-block { grid-template-columns: 1fr; padding: 40px; gap: 40px; }
-  }
-  .price-num {
-    font-family: 'Anton', sans-serif;
-    font-size: clamp(96px, 14vw, 200px);
-    color: var(--paper);
-    line-height: 0.9;
-    display: flex;
-    align-items: flex-start;
-  }
-  .price-num .dollar {
-    font-size: 0.4em;
-    color: var(--hi-vis);
-    margin-right: 8px;
-    margin-top: 14px;
-  }
-  .price-num .period {
-    font-size: 0.18em;
-    color: rgba(244,238,224,0.6);
-    margin-left: 12px;
-    margin-top: 16px;
-    font-family: 'JetBrains Mono', monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-  .price-includes {
-    list-style: none;
-  }
-  .price-includes li {
-    padding: 14px 0;
-    border-bottom: 1px solid var(--line);
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    font-size: 15px;
-  }
-  .price-includes li:last-child { border-bottom: none; }
-  .price-includes li::before {
-    content: "✓";
-    color: var(--hi-vis);
-    font-weight: 700;
-    font-size: 16px;
-    flex-shrink: 0;
-  }
-  .price-includes li strong { color: var(--paper); }
-  .price-setup {
-    margin-top: 24px;
-    padding: 16px;
-    background: rgba(255,92,28,0.08);
-    border-left: 3px solid var(--hi-vis);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--hi-vis);
-  }
-
-  /* ----- GUARANTEE ----- */
-  .guarantee {
-    background: var(--hi-vis);
-    color: var(--ink);
-    padding: 80px 32px;
-    text-align: center;
-  }
-  .guarantee-stamp {
-    display: inline-block;
-    border: 4px solid var(--ink);
-    padding: 12px 28px;
-    font-family: 'Anton', sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    transform: rotate(-2deg);
-    margin-bottom: 32px;
-  }
-  .guarantee h2 {
-    color: var(--ink);
-    max-width: 1100px;
-    margin: 0 auto 24px;
-  }
-  .guarantee p {
-    max-width: 720px;
-    margin: 0 auto;
-    font-size: 17px;
-    color: rgba(10,10,10,0.85);
-  }
-
-  /* ----- FAQ ----- */
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 80px;
-  }
-  @media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; gap: 32px; } }
-  details {
-    border-bottom: 1px solid var(--line);
-    padding: 22px 0;
-    cursor: pointer;
-  }
-  details:first-of-type { border-top: 1px solid var(--line); }
-  summary {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Anton', sans-serif;
-    font-size: 22px;
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
-    transition: color 0.2s;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after {
-    content: "+";
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 28px;
-    color: var(--hi-vis);
-    transition: transform 0.2s;
-  }
-  details[open] summary { color: var(--hi-vis); }
-  details[open] summary::after { transform: rotate(45deg); }
-  details p {
-    margin-top: 14px;
-    color: rgba(244,238,224,0.7);
-    line-height: 1.6;
-    font-size: 15px;
-    max-width: 680px;
-  }
-
-  /* ----- FINAL CTA ----- */
-  .final-cta {
-    background: var(--paper);
-    color: var(--ink);
-    padding: 120px 32px;
-    text-align: center;
-    border-top: 4px solid var(--hi-vis);
-  }
-  .final-cta h2 {
-    font-size: clamp(60px, 11vw, 180px);
-    margin-bottom: 32px;
-  }
-  .final-cta h2 .accent { color: var(--hi-vis-deep); }
-  .final-cta-sub {
-    font-size: clamp(17px, 1.4vw, 21px);
-    margin-bottom: 48px;
-    color: rgba(10,10,10,0.7);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .final-cta .btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); padding: 22px 36px; font-size: 16px; }
-  .final-cta .btn-primary:hover { background: var(--hi-vis-deep); border-color: var(--hi-vis-deep); box-shadow: 4px 4px 0 var(--ink); }
-
-  /* ----- FOOTER ----- */
-  footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 48px 32px 32px;
-    border-top: 1px solid var(--line);
-  }
-  .footer-inner {
-    max-width: 1320px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-  .footer-meta {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: rgba(244,238,224,0.5);
-  }
-
-  /* corner badge */
-  .corner-badge {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 50;
-    background: var(--ink);
-    border: 2px solid var(--hi-vis);
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--paper);
-    text-decoration: none;
-    transition: all 0.15s;
-    cursor: pointer;
-  }
-  .corner-badge:hover {
-    background: var(--hi-vis);
-    color: var(--ink);
-  }
-  .corner-badge::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: var(--hi-vis);
-    border-radius: 50%;
-    animation: pulse 1.4s infinite;
-  }
-  .corner-badge:hover::before { background: var(--ink); }
-  @media (max-width: 600px) {
-    .corner-badge { display: none; }
-  }
-</style>
-</head>
-<body>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-track">
-    <span>74% of trades calls go unanswered</span>
-    <span>86% of callers won't leave a voicemail</span>
-    <span>Live in 7 days</span>
-    <span>$497 / month flat — cancel anytime</span>
-    <span>Built for local service businesses in Williamson County, TX</span>
-    <span>Georgetown · Round Rock · Cedar Park · Leander · Hutto</span>
-    <span>74% of trades calls go unanswered</span>
-    <span>86% of callers won't leave a voicemail</span>
-    <span>Live in 7 days</span>
-    <span>$497 / month flat — cancel anytime</span>
-    <span>Built for local service businesses in Williamson County, TX</span>
-    <span>Georgetown · Round Rock · Cedar Park · Leander · Hutto</span>
-  </div>
-</div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <div class="logo">
-      <span class="logo-mark"></span>
-      <span class="logo-text">
-        <span class="l1">Job</span>
-        <span class="l2">Answered</span>
-      </span>
-    </div>
-    <div class="nav-links">
-      <a href="#how">How it works</a>
-      <a href="#what">What it does</a>
-      <a href="#price">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a href="#book" class="nav-cta">Book demo →</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="eyebrow">AI Receptionist for Williamson County local service businesses</div>
-      <h1 class="display hero-headline">
-        Every call<br>
-        <span class="hi">answered.</span><br>
-        <span class="stroke">Period.</span>
-      </h1>
-      <p class="hero-sub">
-        Job Answered is a done-for-you answering service that picks up every call 24/7, qualifies the lead, and books the job straight to your calendar. Built for local service business shops in Georgetown, Round Rock, Cedar Park, Leander, and Hutto. Live in 7 days. $497/month flat. No contracts.
-      </p>
-      <div class="hero-cta">
-        <a href="#book" class="btn-primary">Book a 15-min demo <span class="arrow">→</span></a>
-        <a href="#how" class="btn-secondary">See how it works</a>
-      </div>
-    </div>
-
-    <div class="phone-card" id="phoneCard">
-      <div class="phone-card-header">
-        <div class="phone-card-label">→ Live call · 9:47 PM Tuesday</div>
-        <div class="live-dot">Recording</div>
-      </div>
-      <div class="transcript" id="transcript"></div>
-      <div class="booking-confirm" id="bookingConfirm">
-        ✓ Job booked
-        <strong>$680 · AC repair · Tomorrow 9 AM</strong>
-        Customer texted confirmation. Tech notified.
-      </div>
-      <button class="replay-btn" onclick="playDemo()">↻ Replay demo call</button>
-    </div>
-  </div>
-</section>
-
-<!-- LOCAL BAR -->
-<div class="local-bar">
-  <div class="local-bar-inner">
-    <span class="pin">◉</span>
-    <span>Williamson County, TX</span>
-    <span>·</span>
-    <span>Georgetown · Round Rock · Cedar Park · Leander · Hutto · Taylor · Liberty Hill</span>
-    <span>·</span>
-    <span>Built locally · Run locally · Owner answers the phone</span>
-  </div>
-</div>
-
-<!-- THE PROBLEM -->
-<section class="section-light" id="problem">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="eyebrow">The Math</div>
-      <h2 class="display">Every missed call is a <span class="accent">job your competitor books.</span></h2>
-      <p class="section-sub" style="color: rgba(10,10,10,0.7);">
-        You're under a sink, on a roof, in an attic. Phone rings. Goes to voicemail. The homeowner is already calling the next number on Google.
-      </p>
-    </div>
-
-    <div class="calc-grid">
-      <div class="calc-stats">
-        <div class="stat">
-          <div class="stat-num">74%</div>
-          <div class="stat-label">of trades calls go unanswered<span class="stat-source">NextPhone, 130k call analysis</span></div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">86%</div>
-          <div class="stat-label">of callers won't leave a voicemail<span class="stat-source">Industry research, 2026</span></div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">$680</div>
-          <div class="stat-label">average emergency local service business ticket<span class="stat-source">ServiceTitan benchmark</span></div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">&lt; 60s</div>
-          <div class="stat-label">how long callers wait before moving on<span class="stat-source">Invoca</span></div>
-        </div>
-      </div>
-
-      <div class="calculator">
-        <div class="calc-title">// Your missed-revenue calculator</div>
-        <div class="calc-row">
-          <label>Missed calls per week <span class="calc-value" id="callsVal">8</span></label>
-          <input type="range" min="1" max="40" value="8" id="callsInput" />
-        </div>
-        <div class="calc-row">
-          <label>Average ticket <span class="calc-value" id="ticketVal">$680</span></label>
-          <input type="range" min="200" max="3000" step="50" value="680" id="ticketInput" />
-        </div>
-        <div class="calc-row">
-          <label>Close rate when answered <span class="calc-value" id="closeVal">35%</span></label>
-          <input type="range" min="10" max="80" value="35" id="closeInput" />
-        </div>
-        <div class="calc-result">
-          <div class="calc-result-label">Revenue you're losing per year</div>
-          <div class="calc-result-num" id="lossNum">$98,800</div>
-          <div class="calc-result-sub">Job Answered costs $5,964/yr. ROI: <span id="roiNum">16.6×</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="eyebrow">7 Days From Hello To Live</div>
-      <h2 class="display">Simple <span class="accent">on purpose.</span></h2>
-      <p class="section-sub">No 90-day rollouts. No "transformation roadmap." We have one playbook and we run it the same way every time.</p>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-day">Day 1</div>
-        <div class="step-num">01</div>
-        <div class="step-title display">Onboarding call</div>
-        <div class="step-desc">30 minutes. We capture how you talk to customers, your pricing tiers, your service area, your emergency rules, and your calendar.</div>
-      </div>
-      <div class="step">
-        <div class="step-day">Day 2–4</div>
-        <div class="step-num">02</div>
-        <div class="step-title display">We build your AI</div>
-        <div class="step-desc">Trained on your voice, your services, your pricing. Connected to Jobber, Housecall Pro, ServiceTitan, or Google Calendar.</div>
-      </div>
-      <div class="step">
-        <div class="step-day">Day 5–6</div>
-        <div class="step-num">03</div>
-        <div class="step-title display">You stress-test it</div>
-        <div class="step-desc">We run 15 real-world scenarios with you on the line: emergencies, price shoppers, after-hours, Spanish callers. Tune until you sign off.</div>
-      </div>
-      <div class="step">
-        <div class="step-day">Day 7</div>
-        <div class="step-num">04</div>
-        <div class="step-title display">Go live</div>
-        <div class="step-desc">Forward your line. Calls start booking jobs. We monitor every call for the first 30 days and tune weekly. You watch the calendar fill.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT IT DOES -->
-<section class="section-light" id="what">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="eyebrow">What Job Answered Actually Does</div>
-      <h2 class="display">One job. Done <span class="accent">right.</span></h2>
-      <p class="section-sub" style="color: rgba(10,10,10,0.7);">No 14-feature SaaS to learn. Job Answered does one thing — answer the phone and book the job — and does it better than the receptionist you can't afford.</p>
-    </div>
-
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">24</div>
-        <div class="feature-title">Picks up 24/7</div>
-        <div class="feature-desc">Every call. First ring. 2 AM, Sunday morning, Christmas Eve. Handles unlimited simultaneous calls during summer surges.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">→</div>
-        <div class="feature-title">Books the job live</div>
-        <div class="feature-desc">Reads your real calendar, offers real time slots, books straight in. Customer gets a confirmation text before they hang up.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">!</div>
-        <div class="feature-title">Triages emergencies</div>
-        <div class="feature-desc">"No cooling," "burst pipe," "no heat" — keywords trigger an instant warm transfer to your on-call tech. No homeowner waits.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">$</div>
-        <div class="feature-title">Trained on your pricing</div>
-        <div class="feature-desc">Knows your service call fee, your diagnostic rate, your emergency multiplier. Quotes ranges, not guesses.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">ES</div>
-        <div class="feature-title">Bilingual EN / ES</div>
-        <div class="feature-desc">Williamson County reality: a meaningful share of your callers prefer Spanish. Job Answered handles both natively. No script switching.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">↻</div>
-        <div class="feature-title">Spam filter</div>
-        <div class="feature-desc">Robocalls, telemarketers, "your warranty has expired." Filtered before your phone rings. Real callers only.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="price">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="eyebrow">One Plan. One Price. No Tiers.</div>
-      <h2 class="display">$497 <span class="accent">a month.</span><br>That's the whole price list.</h2>
-    </div>
-
-    <div class="pricing-block">
-      <div>
-        <div class="price-num">
-          <span class="dollar">$</span>497<span class="period">/ mo</span>
-        </div>
-        <div class="price-setup">$1,000 one-time setup · waived for first 10 Williamson County clients</div>
-      </div>
-      <ul class="price-includes">
-        <li><strong>Custom AI receptionist</strong> — built and tuned to your business in 7 days</li>
-        <li><strong>Unlimited calls</strong> — no per-minute, per-call, or overage charges</li>
-        <li><strong>24/7 booking</strong> — direct into Jobber, Housecall Pro, ServiceTitan, or Google Calendar</li>
-        <li><strong>Bilingual English / Spanish</strong> — included, not an upsell</li>
-        <li><strong>Live emergency transfer</strong> to your on-call tech</li>
-        <li><strong>Monthly performance report</strong> — calls answered, jobs booked, revenue captured</li>
-        <li><strong>Weekly tuning</strong> for the first 90 days. Monthly after that.</li>
-        <li><strong>30-day money back.</strong> Cancel anytime. No contracts. Ever.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section class="guarantee">
-  <div class="guarantee-stamp">★ Booked-Job Guarantee ★</div>
-  <h2 class="display">If Job Answered doesn't book you at least <br><u>$2,000 in jobs</u> in your first 30 days,<br>you get every dollar back.</h2>
-  <p>No fine print, no escape clauses. If the math doesn't work, you don't pay. We can offer this because it always works — but if you're the exception, we'll write the check.</p>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="section-inner">
-    <div class="faq-grid">
-      <div>
-        <div class="eyebrow">Real Questions</div>
-        <h2 class="display">The stuff <span class="accent">owners actually ask.</span></h2>
-        <p class="section-sub">If your question isn't here, text us. We answer.</p>
-      </div>
-      <div>
-        <details>
-          <summary>Will my customers know it's AI?</summary>
-          <p>Most won't. Job Answered uses ultra-low-latency voice that sounds human and conversational. Older customers who prefer a real person can ask for one — we transfer them to you or your on-call tech instantly.</p>
-        </details>
-        <details>
-          <summary>What if Job Answered books a bad job?</summary>
-          <p>We train it on the kind of jobs you do and don't take. Service area boundaries (we'll set yours to Williamson County or however far you drive), job types you decline, minimum tickets, after-hours rules — all built in. The first 90 days, we listen to every call and tune weekly. After that, you have a tight system that books only what you want.</p>
-        </details>
-        <details>
-          <summary>Can it work with my software (Jobber, Housecall Pro, ServiceTitan)?</summary>
-          <p>Yes. All three are fully supported, plus Google Calendar for shops not on a CRM yet. If you use something else, we'll tell you in the discovery call whether we can integrate it.</p>
-        </details>
-        <details>
-          <summary>Why $497 when other AI tools are $99?</summary>
-          <p>Because $99 tools are DIY. You build it. You train it. You tune it. You troubleshoot it. Job Answered is done-for-you. We build the system, integrate your calendar, run 15 stress-test scenarios, monitor every call for the first 30 days, and tune it weekly. You answer one onboarding call and watch the jobs come in.</p>
-        </details>
-        <details>
-          <summary>What if I want to cancel?</summary>
-          <p>Cancel anytime, no contract, no fee. Within the first 30 days, full money back. We'd rather lose a client cleanly than lock anyone in. The only people who stay are people for whom it works.</p>
-        </details>
-        <details>
-          <summary>Are you actually local?</summary>
-          <p>Yes. We're based in Georgetown, Texas. Onboarding calls can be done in person if you're in Williamson County — we'll come to your shop. We also know the local market: drive times, service-area boundaries, school district pricing tiers, the way Round Rock and Liberty Hill homeowners differ from Cedar Park.</p>
-        </details>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta" id="book">
-  <h2 class="display">Stop missing<br>the <span class="accent">money.</span></h2>
-  <p class="final-cta-sub">15-minute demo. We'll show you exactly what Job Answered would have done with last week's missed calls.</p>
-  <a href="mailto:mlangston@engageright.com?subject=Demo%20request&body=Shop%20name%3A%20%0ACity%20(Georgetown%2C%20Round%20Rock%2C%20etc.)%3A%20%0ATrucks%3A%20%0ABest%20time%20to%20talk%3A%20" class="btn-primary">Book the demo <span class="arrow">→</span></a>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="logo">
-      <span class="logo-mark"></span>
-      <span class="logo-text">
-        <span class="l1">Job</span>
-        <span class="l2">Answered</span>
-      </span>
-    </div>
-    <div class="footer-meta">© 2026 Job Answered · Georgetown, Texas · A division of Engage Right LLC</div>
-  </div>
-</footer>
-
-<a href="#book" class="corner-badge">Live demo →</a>
-
-<script>
-  // ============ DEMO TRANSCRIPT ANIMATION ============
-  const transcript = document.getElementById('transcript');
-  const bookingConfirm = document.getElementById('bookingConfirm');
-
-  const messages = [
-    { who: 'customer', label: '— Caller (9:47 PM)', text: 'Hi, my AC just stopped working. It\'s 88 degrees in the house. Can someone come out?' },
-    { who: 'ai', label: '— Job Answered', text: 'I\'m sorry to hear that — let\'s get a tech out to you. Is the unit running but blowing warm, or is it completely off?' },
-    { who: 'customer', label: '— Caller', text: 'It\'s totally off. The breaker hasn\'t tripped though.' },
-    { who: 'ai', label: '— Job Answered', text: 'Got it. We have a tech available tomorrow at 9 AM or 11:30 AM. Diagnostic fee is $89 and goes toward any repair. Which works better?' },
-    { who: 'customer', label: '— Caller', text: '9 AM. Address is 4827 Sun City Boulevard, Georgetown.' },
-    { who: 'ai', label: '— Job Answered', text: 'Booked. You\'ll get a confirmation text in about 30 seconds and a tech bio when they\'re on the way. Anything else I can help with?' },
-  ];
-
-  function playDemo() {
-    transcript.innerHTML = '';
-    bookingConfirm.style.animation = 'none';
-    bookingConfirm.style.opacity = '0';
-
-    messages.forEach((msg, i) => {
-      const el = document.createElement('div');
-      el.className = `msg msg-${msg.who}`;
-      el.style.animationDelay = `${i * 0.7}s`;
-      el.innerHTML = `<div class="msg-label">${msg.label}</div><div class="msg-text">${msg.text}</div>`;
-      transcript.appendChild(el);
-    });
-
-    setTimeout(() => {
-      bookingConfirm.style.animation = 'msgIn 0.5s forwards';
-    }, messages.length * 700 + 200);
-  }
-
-  playDemo();
-
-  // ============ MISSED-REVENUE CALCULATOR ============
-  const callsInput = document.getElementById('callsInput');
-  const ticketInput = document.getElementById('ticketInput');
-  const closeInput = document.getElementById('closeInput');
-  const callsVal = document.getElementById('callsVal');
-  const ticketVal = document.getElementById('ticketVal');
-  const closeVal = document.getElementById('closeVal');
-  const lossNum = document.getElementById('lossNum');
-  const roiNum = document.getElementById('roiNum');
-
-  function fmtMoney(n) {
-    return '$' + Math.round(n).toLocaleString();
-  }
-
-  function recalc() {
-    const calls = parseInt(callsInput.value);
-    const ticket = parseInt(ticketInput.value);
-    const close = parseInt(closeInput.value) / 100;
-
-    callsVal.textContent = calls;
-    ticketVal.textContent = fmtMoney(ticket);
-    closeVal.textContent = Math.round(close * 100) + '%';
-
-    const annualLoss = calls * 52 * ticket * close;
-    lossNum.textContent = fmtMoney(annualLoss);
-
-    const annualCost = 497 * 12;
-    const roi = annualLoss / annualCost;
-    roiNum.textContent = roi.toFixed(1) + '×';
-  }
-
-  callsInput.addEventListener('input', recalc);
-  ticketInput.addEventListener('input', recalc);
-  closeInput.addEventListener('input', recalc);
-  recalc();
-</script>
-
-</body>
-</html>
+Book a 10-min call
+→
+Job
+Answered
+© 2026 Job Answered · Georgetown, Texas · A division of Engage Right LLC
+Book a call →
